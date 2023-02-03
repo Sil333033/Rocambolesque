@@ -1,0 +1,132 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+div.container{
+    nav{
+        div.row{
+            div.topbar{
+                @include DisplayPosition($flex-direction: row, $justify-content: space-between);
+                div.navbar__contact{
+                    @include DisplayPosition($flex-direction: row, $align-items: center);
+                    i{
+                        padding: 0rem .5rem;
+                    }
+                    p{
+                        font-size: 16px;
+                        font-family: $roboto-font;
+                        @media only screen and (max-width: 1200px) {
+                            font-size: 13px;
+                        }
+                    }
+                }
+                div.social__media{
+                    @include DisplayPosition($flex-direction: row, $align-items: center, $justify-content: flex-end);
+                    a{
+                        color:$dark-text;
+                        text-decoration: none;
+                        margin: 0rem .5rem;
+                        i{
+                                color: $dark-text;
+                        }
+                    }
+                }
+            }
+        }
+        div.row{
+            @include DisplayPosition($flex-direction:row, $justify-content: space-between, $align-items: center);
+            a.logo{
+                position: relative;
+                color:$dark-text;
+                text-decoration: none;
+                font-family: $charm-font;
+                font-size: 36px;
+            }
+            a.logo::after{
+                content: 'R';
+                top: -1.3rem;
+                left: 3.5rem;
+                z-index: -1;
+                position: absolute;
+                color: $light-green;
+                font-size: 70px;
+            }
+            ul{
+                @include DisplayPosition($flex-direction: row, $justify-content:flex-end);
+                list-style-type: none;
+                li{
+                    a{
+                        text-decoration: none;
+                        padding: 0rem .5rem;
+                        color: $dark-text;
+                        font-family: $roboto-font;
+                        font-weight: 700;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 992px){
+    .topbar{
+        position: absolute;
+        display: none !important;
+    }
+    div.navbar__toggle span.bar{
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        display: block;
+        cursor: pointer;
+        background: #000000;
+    }
+    div#mobile-menu{ 
+        z-index: 7;
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+    div#mobile-menu.is-active span.bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    div#mobile-menu.is-active span.bar:nth-child(2){
+        opacity: 0;
+    }
+    div#mobile-menu.is-active span.bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    ul.menu-items{
+        @include DisplayPosition($flex-direction: column !important, $justify-content:space-evenly !important);
+        position: fixed;
+        margin: 0;
+        width: 100%;
+        top: -1000px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: -1;
+        li{
+            a{
+                color: #000000;
+                text-align: center;
+                padding: 2rem;
+                width: 100%;
+                display: table;
+            }
+        }
+        &.active{
+            @include DisplayPosition($flex-direction: column !important, $justify-content:space-evenly !important);
+            background: #ffffff;
+            top: 0rem;
+            right: 0rem;
+            opacity: 1;
+            width:50rem;
+            transition: all 0.5s ease;
+            z-index: 5;
+            height: 35vh;
+            font-size: 1.6rem;
+        }
+    }
+}

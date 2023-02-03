@@ -1,0 +1,52 @@
+@mixin DisplayPosition($flex-direction: none, $justify-content:none, $align-items:none,$align-content:none,$align-self:none,$flex-wrap :none){
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    align-content: $align-content;
+    align-self: $align-self;
+    flex-wrap: $flex-wrap;
+}
+
+@mixin CutImage(){
+    width: 100%;
+    object-fit: cover;
+    clip-path: polygon(100% 7%, 100% 66%, 0 90%, 0 30%);
+    filter: blur(4px);
+    z-index: -1;
+}
+
+@mixin CircleStyling(){
+    position: absolute;
+    @include DisplayPosition($flex-direction: column, $align-items: center, $justify-content:center );
+    background-color: rgb(255, 255, 255);
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    margin: 0rem;
+    i{
+        color: $dark-green;
+        padding: .5rem 0rem;
+    }
+    h1, h2{
+        font-family: $roboto-font;
+        font-size: 24px;
+        @media only screen and (max-width: 576px){
+            font-size: 20px;
+        }
+    }
+}
+
+@mixin ButtonStyling{
+    @include DisplayPosition($justify-content: center, $align-items: center);
+    height: 1.5rem;
+    width: 5rem;
+    border: 2px solid $dark-green;
+    background-color: $white;
+    a{
+        text-decoration: none;
+        color: $dark-text;
+        font-family: $roboto-font;
+        font-weight: 700;
+    }
+}

@@ -1,0 +1,201 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+@import '../abstracts/placehloders';
+@import '../components/buttons';
+// @import 'animate.css';
+
+
+// Navbar
+@import '../layout/navbar';
+
+// Intro Section
+
+section.intro__section{
+    @include DisplayPosition($flex-direction: column, $align-items: center );
+    div.intro{
+            @include DisplayPosition($flex-direction: column, $align-items: center);
+            position: relative;
+            img.banner{
+                @include CutImage();
+            }
+            div.intro-text{
+                p{
+                    text-align: center;
+                    font-family: $roboto-font;
+                    color: $light-text;
+                    letter-spacing: .05rem;
+                }
+                @media only screen and (max-width: 992px){
+                    margin-top: 3rem;
+                }
+                @media only screen and (max-width: 576px){
+                    margin-top: 4rem;
+                }
+            }
+            div.circle__heading{
+                bottom: 12rem;
+                @include CircleStyling();
+                @media only screen and (max-width: 1200px){
+                    top: 27rem;
+                }
+                @media only screen and (max-width: 992px){
+                    top: 22rem;
+                }
+                @media only screen and (max-width: 768px){
+                    top: 17rem;
+                }
+                @media only screen and (max-width: 768px){
+                    top: 12rem;
+                }
+                @media only screen and (max-width: 576px){
+                    top: 13rem;
+                }
+            }
+        }
+    }
+
+// Menu Section
+
+section.menu__section{
+    @include DisplayPosition($flex-direction: column, $align-items: center);
+    div.menu{
+        @include DisplayPosition($flex-direction: column, $align-items: center);
+        position: relative;
+        img.banner{
+            @include CutImage();
+        }
+        div.circle__heading{
+            top: 33rem;
+            @include CircleStyling();
+            @media only screen and (max-width: 1200px){
+                top: 27rem;
+            }
+            @media only screen and (max-width: 992px){
+                top: 22rem;
+            }
+            @media only screen and (max-width: 768px){
+                top: 17rem;
+            }
+            @media only screen and (max-width: 768px){
+                top: 12rem;
+            }
+            @media only screen and (max-width: 576px){
+                top: 13rem;
+            }
+        }
+        div.menu__cards{
+            margin-left: 6rem;
+            width: 70%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            @media only screen and (max-width: 1200px){
+                margin-top: 3rem;
+                grid-template-columns: 1fr;
+            }
+            @media only screen and (max-width: 576px){
+               margin-top: 4rem;
+            }
+            div.card{
+                width: 100%;
+                p.menu__number{
+                    color: $light-green;
+                    font-weight: 700;
+                    font-family: $roboto-font;
+                }
+                h3{
+                    padding: 0rem;
+                    margin: 0rem;
+                }
+                p.menu__info{
+                    letter-spacing: .05rem;
+                    color: $light-text;
+                    font-family: $roboto-font;
+                    width: 70%
+                }
+            }
+        }
+        div.reservation{
+            margin: 5rem 0rem;
+            @include DisplayPosition($flex-direction: column, $align-items: center);
+            h2{
+                font-weight: 700;
+                font-family: $roboto-font;
+                font-size: 24px;
+                margin: 3rem 0rem;
+            }
+        }
+    }
+}
+
+// Team Section
+
+section.team__section{
+    box-shadow: rgba(0, 0, 0, 0.548) 0px -50px 2.5rem -28px inset;
+    div.team{
+        @include DisplayPosition($flex-direction: column, $align-items: center);
+        position: relative;
+        img.banner{
+            @include CutImage();
+        }
+        div.circle__heading{
+            top: 33rem;
+            @include CircleStyling();
+            @media only screen and (max-width: 1200px){
+                top: 27rem;
+            }
+            @media only screen and (max-width: 992px){
+                top: 22rem;
+            }
+            @media only screen and (max-width: 768px){
+                top: 17rem;
+            }
+            @media only screen and (max-width: 768px){
+                top: 12rem;
+            }
+            @media only screen and (max-width: 576px){
+                top: 13rem;
+            }
+        }
+        p{
+            font-family: $roboto-font;
+            color: $light-text;
+            text-align: center;
+            @media only screen and (max-width: 992px){
+                margin-top: 3rem;
+            }
+            @media only screen and (max-width: 576px){
+                margin-top: 5rem;
+               width: 80%;
+            }
+        }
+        div.team__members{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            @media only screen and (max-width: 576px){
+                grid-template-columns: 1fr;
+            }
+            div.avatar{
+                margin: 3rem;
+                @include DisplayPosition($flex-direction: column, $align-items: center);
+                    img.avatar__img{
+                        object-fit: cover;
+                        border-radius: 50%;
+                        width: 10rem;
+                        height: 10rem;
+                    }
+                h3{
+                    font-family: $roboto-font;
+                    margin: 1rem 0rem 0rem 0rem;
+                    font-size: 20px;
+                    font-weight: 700;
+                    text-align: center;
+                }
+                p{
+                    font-family: $roboto-font;
+                    color: $light-text;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

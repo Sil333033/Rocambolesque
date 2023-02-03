@@ -1,0 +1,89 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+@import '../abstracts/placehloders';
+@import '../components/buttons';
+
+section.contact__section{
+    margin: 3rem 2rem 5rem 2rem;
+    @include DisplayPosition($flex-direction: column, $align-items: center, $justify-content: center);
+    div.contact{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        @media only screen and (max-width: 992px){
+            grid-template-columns: 1fr;
+        }
+        // @include DisplayPosition($flex-direction: row, $align-items: center, $justify-content: center);
+                div.contact__info{
+                    @include DisplayPosition($flex-direction: column, $justify-content: space-between);
+                    width: 19rem;
+                    height: 20rem;
+                    padding: 1rem 2rem;
+                    background-color:$dark-green;
+                    h3{
+                        font-size: 24px;
+                        color: $white;
+                        @media only screen and (max-width: 576px){
+                            font-size: 20px;
+                        }
+                    }
+                    div{
+                        p:nth-child(odd) { 
+                            font-size: 16px;
+                            color: $white;
+                            font-weight: 400;
+                            text-decoration: none;
+                        }
+                        p{
+                            font-size: 18px;
+                            text-decoration: underline;
+                            font-weight: 700;
+                            color: $white;
+                            font-family: $roboto-font;
+                        }
+                    }
+                    @media only screen and (max-width: 576px){
+                        height: 24rem;
+                    }
+                }
+                div.contact__form{
+                    width: 19rem;
+                    height: 20rem;
+                    background-color: $white;
+                    padding: 3rem 2rem;
+                    // background-color: antiquewhite;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    // @include DisplayPosition($flex-direction: column);
+                    input{
+                        width: 15rem;
+                        height: 1.5rem;
+                        padding:0;
+                        font-family: $roboto-font;
+                        border: 0;
+                        outline: 0;
+                        background: transparent;
+                        border-bottom: 2px solid $light-text;
+                        &#name{
+                            margin-bottom:1rem;
+                        }
+                        &#email{
+                            margin-bottom: 1rem;
+                        }
+                    }
+                    textarea{
+                        width: 15rem;
+                        height: 5rem;
+                        padding:0;
+                        font-family: $roboto-font;
+                        border: 0;
+                        outline: 0;
+                        background: transparent;
+                        border-bottom: 2px solid $light-text;
+                    }
+                    button.contact-btn{
+                        margin: 1rem 0rem 1rem 0rem !important;
+                        width: 15rem;
+                    }
+                }
+            }
+        }

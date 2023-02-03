@@ -1,0 +1,60 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+@import '../abstracts/placehloders';
+@import '../components/buttons';
+
+section.menu__page{
+    @include DisplayPosition($flex-direction: column, $justify-content: center, $align-items: center);
+    div.menu__heading{
+        margin: 3rem 0rem;
+        @include DisplayPosition($flex-direction: column, $justify-content: center, $align-items: center);
+        div.heading__line{
+            height: 2px;
+            background-color: $light-green;
+            width: 25rem;
+        }
+        h3{
+            font-family: $roboto-font;
+            width: 25rem;
+        }
+    }
+    div.menu{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        div.menu__items{
+            width: 25rem;
+            h3{
+                margin: 3rem 2rem;
+                font-family: $roboto-font;
+            }
+            ul{
+                list-style-type: none;
+                li{
+                    font-family: $roboto-font;
+                    font-weight: 700;
+                    i{
+                        color: $dark-green;
+                    }
+                }
+                p{
+                    font-family: $roboto-font;
+                    color: $light-text;
+                }
+            }
+        }
+        div.menu__img{
+            margin: 0rem 2rem;
+            width: 25rem;
+            @include DisplayPosition($flex-direction: column, $justify-content: center, $align-items: center);
+            img{
+                object-fit: cover;
+            }
+            img#img__3{
+                width: 100%;
+            }
+            // img#img__2{
+            //     width: 100%;
+            // }
+        }
+    }
+}
