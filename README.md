@@ -2,6 +2,10 @@
 
 Dit project moeten we maken in het 2e semester van leerjaar 2 tijdens de opleiding Software Developer op MBO Utrecht
 
+## Documentation
+
+[Database entity relationship diagram](https://github.com/Sil333033/Rocambolesque/blob/main/Docs/DB/ERD.png)
+
 ## Setup
 
 1. Clone de repository
