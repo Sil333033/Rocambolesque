@@ -1913,7 +1913,7 @@ form input[type=text] {
   font-family: "Open Sans", sans-serif;
 }
 
-section.register__section {
+section.reservation__section {
   display: flex;
   flex-direction: column;
   justify-content: none;
@@ -1922,7 +1922,7 @@ section.register__section {
   align-self: none;
   flex-wrap: none;
 }
-section.register__section div.form {
+section.reservation__section div.form {
   width: 15rem;
   display: flex;
   flex-direction: column;
@@ -1932,10 +1932,10 @@ section.register__section div.form {
   align-self: none;
   flex-wrap: none;
 }
-section.register__section div.form h2 {
+section.reservation__section div.form h2 {
   font-size: 32px;
 }
-section.register__section div.button-div {
+section.reservation__section div.button-div {
   padding: 3rem;
   display: flex;
   flex-direction: column;

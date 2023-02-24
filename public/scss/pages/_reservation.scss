@@ -1,6 +1,6 @@
 @import '../components/form';
 
-section.register__section{
+section.reservation__section{
     @include DisplayPosition($flex-direction: column, $align-items: center);
     div.form{
         h2{
