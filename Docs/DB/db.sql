@@ -1,24 +1,17 @@
 CREATE DATABASE IF NOT EXISTS `Rocambolesque`;
 use `Rocambolesque`;
-
 DROP TABLE IF EXISTS userPerRole;
 DROP TABLE IF EXISTS Role;
-
 DROP TABLE IF EXISTS User;
 DROP TABLE IF EXISTS Contact;
-
 DROP TABLE IF EXISTS Reservation;
 DROP TABLE IF EXISTS Person;
-
 DROP TABLE IF EXISTS `Table`;
 DROP TABLE IF EXISTS OpeningTime;
-
 DROP TABLE IF EXISTS Dish;
 DROP TABLE IF EXISTS Category;
 DROP TABLE IF EXISTS Price;
 DROP TABLE IF EXISTS Menu;
-
-
 CREATE TABLE `Person`(
     `id` BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `firstName` VARCHAR(255) NOT NULL,
@@ -29,8 +22,7 @@ CREATE TABLE `Person`(
     `remark` VARCHAR(255) NOT NULL,
     `createdAt` DATETIME NOT NULL,
     `updatedAt` DATETIME NOT NULL
-) ENGINE=INNODB;
-
+) ENGINE = INNODB;
 CREATE TABLE `Contact`(
     `id` BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `personId` BIGINT NOT NULL,
@@ -40,22 +32,18 @@ CREATE TABLE `Contact`(
     `remark` VARCHAR(255) NOT NULL,
     `createdAt` DATETIME NOT NULL,
     `updatedAt` DATETIME NOT NULL,
-	FOREIGN KEY (personId) REFERENCES Person(id)
-) ENGINE=INNODB;
-
+    FOREIGN KEY (personId) REFERENCES Person(id)
+) ENGINE = INNODB;
 CREATE TABLE `User`(
     `id` BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `personId` BIGINT NOT NULL,
-    `contactId` BIGINT NOT NULL,
     `password` VARCHAR(255) NOT NULL,
     `isActive` TINYINT NOT NULL,
     `remark` VARCHAR(255) NOT NULL,
     `createdAt` DATETIME NOT NULL,
     `updatedAt` DATETIME NOT NULL,
-    FOREIGN KEY (`personId`) REFERENCES `Person`(`id`),
-    FOREIGN KEY (`contactId`) REFERENCES `Contact`(`id`)
-) ENGINE=INNODB;
-
+    FOREIGN KEY (`personId`) REFERENCES `Person`(`id`)
+) ENGINE = INNODB;
 CREATE TABLE `Role`(
     `id` BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `typeRol` VARCHAR(255) NOT NULL,
@@ -63,8 +51,7 @@ CREATE TABLE `Role`(
     `remark` VARCHAR(255) NOT NULL,
     `createdAt` DATETIME NOT NULL,
     `updatedAt` DATETIME NOT NULL
-) ENGINE=INNODB;
-
+) ENGINE = INNODB;
 CREATE TABLE `userPerRole`(
     `id` BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `roleId` BIGINT NOT NULL,
@@ -74,9 +61,8 @@ CREATE TABLE `userPerRole`(
     `createdAt` DATETIME NOT NULL,
     `updatedAt` DATETIME NOT NULL,
     FOREIGN KEY (`roleId`) REFERENCES `Role`(`id`),
-	FOREIGN KEY (`userId`) REFERENCES `User`(`id`)
-) ENGINE=INNODB;
-
+    FOREIGN KEY (`userId`) REFERENCES `User`(`id`)
+) ENGINE = INNODB;
 CREATE TABLE `Table`(
     `id` BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `tableNumber` BIGINT NOT NULL,
@@ -87,8 +73,7 @@ CREATE TABLE `Table`(
     `remark` VARCHAR(255) NOT NULL,
     `createdAt` DATETIME NOT NULL,
     `updatedAt` DATETIME NOT NULL
-) ENGINE=INNODB;
-
+) ENGINE = INNODB;
 CREATE TABLE `OpeningTime`(
     `id` BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `day` VARCHAR(255) NOT NULL,
@@ -98,8 +83,7 @@ CREATE TABLE `OpeningTime`(
     `remark` VARCHAR(255) NOT NULL,
     `createdAt` DATETIME NOT NULL,
     `updatedAt` DATETIME NOT NULL
-) ENGINE=INNODB;
-
+) ENGINE = INNODB;
 CREATE TABLE `Reservation`(
     `id` BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `personId` BIGINT NOT NULL,
@@ -113,10 +97,7 @@ CREATE TABLE `Reservation`(
     FOREIGN KEY (`personId`) REFERENCES `Person`(`id`),
     FOREIGN KEY (`tableId`) REFERENCES `Table`(`id`),
     FOREIGN KEY (`dayId`) REFERENCES `OpeningTime`(`id`)
-) ENGINE=INNODB;
-
-
-
+) ENGINE = INNODB;
 CREATE TABLE `Menu`(
     `id` BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `name` VARCHAR(255) NOT NULL,
@@ -125,8 +106,7 @@ CREATE TABLE `Menu`(
     `remark` VARCHAR(255) NOT NULL,
     `createdAt` DATETIME NOT NULL,
     `updatedAt` DATETIME NOT NULL
-) ENGINE=INNODB;
-
+) ENGINE = INNODB;
 CREATE TABLE `Price`(
     `id` BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `priceEx` BIGINT NOT NULL,
@@ -135,8 +115,7 @@ CREATE TABLE `Price`(
     `remark` VARCHAR(255) NOT NULL,
     `createdAt` DATETIME NOT NULL,
     `updatedAt` DATETIME NOT NULL
-) ENGINE=INNODB;
-
+) ENGINE = INNODB;
 CREATE TABLE `Category`(
     `id` BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `parentId` BIGINT NOT NULL,
@@ -145,8 +124,7 @@ CREATE TABLE `Category`(
     `remark` VARCHAR(255) NOT NULL,
     `createdAt` DATETIME NOT NULL,
     `updatedAt` DATETIME NOT NULL
-) ENGINE=INNODB;
-
+) ENGINE = INNODB;
 CREATE TABLE `Dish`(
     `id` BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `name` VARCHAR(255) NOT NULL,
@@ -161,4 +139,4 @@ CREATE TABLE `Dish`(
     FOREIGN KEY (`priceId`) REFERENCES `Price`(`id`),
     FOREIGN KEY (`menuId`) REFERENCES `Menu`(`id`),
     FOREIGN KEY (`categoryId`) REFERENCES `Category`(`id`)
-) ENGINE=INNODB;
+) ENGINE = INNODB;
