@@ -1,0 +1,29 @@
+@import '../components/form';
+
+section.login__section{
+    @include DisplayPosition($flex-direction: column, $align-items: center);
+    div.form{
+        h2{
+            font-size: 32px;
+        }
+        width: 15rem;
+        @include DisplayPosition($flex-direction: column);
+    }
+    div.button-div{
+        width: 20rem;
+        padding: 3rem;
+        @include DisplayPosition($flex-direction: column, $align-items: center, $justify-content: center);
+        p{
+            font-family: $openSans-font;
+            font-size: 14px;
+            color:$light-text;
+            a{
+                font-size: 14px;
+                font-family: $openSans-font;
+                color:$light-text;
+                font-weight: 700;
+                text-decoration: underline;
+            }
+        }
+    }
+}

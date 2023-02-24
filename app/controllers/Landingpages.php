@@ -9,6 +9,6 @@ class Landingpages extends Controller
 
     public function index()
     {
-        echo 'indexaaaaaaaaaaa';
+        $this->view("index");
     }
 }

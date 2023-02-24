@@ -4,84 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../../public/css/main.css">
     <title>Document</title>
 </head>
 <body>
-    <!-- Navbar -->
-    <div class="container">
-        <nav>
-            <div class="row">
-                <div class="topbar">
-                    <div class="navbar__contact col-10">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p>DRIEHARINGSTRAAT 27 3511 BH UTRECHT</p>
-                        <i class="fa-solid fa-phone"></i>
-                        <p>+030 - 208 09 74</p>
-                        <i class="fa-regular fa-clock"></i>
-                        <p>MA T/M ZON VAN 17:00 TOT 22:00, BAR TOT 24:00</p>
-                    </div>
-                    <div class="social__media col-2">
-                        <a href=""><i class="fa-brands fa-square-facebook fa-lg"></i></a>
-                        <a href=""><i class="fa-brands fa-instagram fa-lg"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <a href="" class="logo">Rocambolesque</a>
-                </div>
-                <div class="col-8 menu-box">
-                    <div class="navbar__toggle" id="mobile-menu">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </div>
-                    <ul class="menu-items">
-                        <li><a href="/index.php">HOME</a></li>
-                        <li><a href="/menu.php">MENU</a></li>
-                        <li><a href="/reservation.php">RESERVEREN</a></li>
-                        <li><a href="/contact.php">CONTACT</a></li>
-                        <li><a href="/login.php">INLOGGEN</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-
     <section class="menu__page">
+        <div class="quick_menu-nav">
+            <a href="#voorgerechten">VOORGERECHTEN</a>
+            <a href="#hoofdgerechten">HOOFDGERECHTEN</a>
+            <a href="#nagerechten">NAGERECHTEN</a>
+            <a href="#dranken">DRANKEN</a>
+            <a href="#alcohol">ALCOHOLISCHE DRANKEN</a>
+        </div>
         <div class="menu__heading">
             <div class="heading__line"></div>
-            <h2>Voorgerechten</h2>
+            <h2 id="voorgerechten">Voorgerechten</h2>
             <div class="heading__line"></div>
         </div>
         <div class="menu">
             <div class="menu__items">
                 <ul>
+                    <li>MOZZARELLA STICKS</li>
+                    <p>€3.50</p>
+                    <p>Mozzarella</p>
+                    <li>DEVILED EGGS</li>
+                    <p>€5.95</p>
+                    <p>Ei met mayonnaise, ui, bleekselderij en paprikapoeder</p>
+                    <li>ITALIAN BREAD</li>
+                    <p>€5.50</p>
+                    <p>Italiaans brood met, kruidenboter</p>
+                    <li>TOMATO FRITTERS</li>
+                    <p>€7.15</p>
+                    <p>Tomaat en parmezanse kaas in deeg met oregano, basilicum, ui, knoflook en peper</p>
                     <li></li>
-                    <p></p>
-                    <p></p>
-                    <li></li>
-                    <p></p>
+                    <p>€22</p>
                     <p></p>
                     <li></li>
-                    <p></p>
-                    <p></p>
-                    <li></li>
-                    <p></p>
-                    <p></p>
-                    <li></li>
-                    <p></p>
-                    <p></p>
-                    <li></li>
-                    <p></p>
+                    <p>€22</p>
                     <p></p>
                 </ul>
             </div>
         </div>
         <div class="menu__heading">
             <div class="heading__line"></div>
-            <h2>Hoofdgerechten</h2>
+            <h2 id="hoofdgerechten">Hoofdgerechten</h2>
             <div class="heading__line"></div>
         </div>
         <div class="menu">
@@ -119,19 +85,19 @@
                 <ul>
                     <li>WISCONSIN BURGER</li>
                     <p>€18</p>
-                    <p>Ground beef met peper, champignons, tomaat, sla, augurk, mosterd, mayonaise, friet</p>
+                    <p>Ground beef met peper, champignons, tomaat, sla, augurk, mosterd, mayonnaise, friet</p>
                     <li>MAC & CHEESE <i class="fa-solid fa-leaf"></i></li>
                     <p>€12</p>
                     <p>Macaroni met melk, velveeta kaas, parmezaanse kaas, mosterd, peper, cheddar</p>
                     <li>CRAB CAKES <i class="fa-solid fa-fish"></i></li>
                     <p>€21.15</p>
-                    <p>Krabvlees met ei, mayonaise, mosterd, peterselie, peper, wit brood, canola olie</p>
+                    <p>Krabvlees met ei, mayonnaise, mosterd, peterselie, peper, wit brood, canola olie</p>
                     <li>HONEY CHICKEN WINGS</li>
                     <p>€14.95</p>
                     <p>Kippenvleugels met honing, paprika, peper</p>
                     <li>NEW YORK STYLE PIZZA <i class="fa-solid fa-leaf"></i></li>
                     <p>€15.20</p>
-                    <p>tomatensaus met mozzarella, romano kaas, oregano, basilicum, rode peper, olijf olie</p>
+                    <p>Tomatensaus met mozzarella, romano kaas, oregano, basilicum, rode peper, olijf olie</p>
                     <li>CHILI CONEY DOGS</li>
                     <p>€11.70</p>
                     <p>Ground beef op een hotdog met mosterd, tomatensaus, ui, chilipoeder, peper, cheddar</p>
@@ -166,29 +132,81 @@
         </div>
         <div class="menu__heading">
             <div class="heading__line"></div>
-            <h2>Nagerechten</h2>
+            <h2 id="nagerechten">Nagerechten</h2>
             <div class="heading__line"></div>
         </div>
         <div class="menu">
             <div class="menu__items">
                 <ul>
                     <li>TIRAMISU</li>
-                    <p></p>
+                    <p>€5</p>
                     <p>Mascarpone met espresso, ei, cacaopoeder, langevingers en amandel aroma</p>
                     <li>DAME BLANCHE</li>
-                    <p></p>
+                    <p>€7</p>
                     <p>Vanille ijs met chocoladesaus en slagroom</p>
                     <li>PANDAN COTTA</li>
-                    <p></p>
+                    <p>€7.50</p>
                     <p>Pandanpasta met gelatineblaadjes, geraspte kokos, room en kristalsuiker</p>
                     <li>MISO CHEESECAKE</li>
-                    <p></p>
+                    <p>€4.50</p>
                     <p>Koekkruimels met mon chou, creme fraiche, miso, ei en suiker</p>
                     <li>KEY LIME PIE</li>
-                    <p></p>
+                    <p>€5</p>
                     <p>Bastogne koeken met limoen, roomboter, ei, sinaasappelsap, en slagroom</p>
                     <li>ROCKY ROAD</li>
-                    <p></p>
+                    <p>€7.90</p>
+                    <p>Chocolade met honing, vulling keuze uit chocoladesnoep, noten, snoepgoed en koeken</p>
+                </ul>
+            </div>
+        </div>
+        <div class="menu__heading">
+            <div class="heading__line"></div>
+            <h2 id="dranken">Dranken</h2>
+            <div class="heading__line"></div>
+        </div>
+        <div class="menu">
+            <div class="menu__items">
+                <ul>
+                    <li>COLA (ZERO)</li>
+                    <p>€3</p>
+                    <li>ICE TEA</li>
+                    <p>€2</p>
+                    <li>FANTA</li>
+                    <p>€3</p>
+                    <li>FRISTI</li>
+                    <p>€2</p>
+                    <li>SPRITE</li>
+                    <p>€2</p>
+                    <li>THEE</li>
+                    <p>€3</p>
+                </ul>
+            </div>
+        </div>
+        <div class="menu__heading">
+            <div class="heading__line"></div>
+            <h2 id="alcohol">Alcoholische dranken</h2>
+            <div class="heading__line"></div>
+        </div>
+        <div class="menu">
+            <div class="menu__items">
+                <ul>
+                    <li>TIRAMISU</li>
+                    <p>€5</p>
+                    <p>Mascarpone met espresso, ei, cacaopoeder, langevingers en amandel aroma</p>
+                    <li>DAME BLANCHE</li>
+                    <p>€7</p>
+                    <p>Vanille ijs met chocoladesaus en slagroom</p>
+                    <li>PANDAN COTTA</li>
+                    <p>€7.50</p>
+                    <p>Pandanpasta met gelatineblaadjes, geraspte kokos, room en kristalsuiker</p>
+                    <li>MISO CHEESECAKE</li>
+                    <p>€4.50</p>
+                    <p>Koekkruimels met mon chou, creme fraiche, miso, ei en suiker</p>
+                    <li>KEY LIME PIE</li>
+                    <p>€5</p>
+                    <p>Bastogne koeken met limoen, roomboter, ei, sinaasappelsap, en slagroom</p>
+                    <li>ROCKY ROAD</li>
+                    <p>€7.90</p>
                     <p>Chocolade met honing, vulling keuze uit chocoladesnoep, noten, snoepgoed en koeken</p>
                 </ul>
             </div>

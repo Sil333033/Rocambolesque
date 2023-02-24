@@ -1,0 +1,13 @@
+form{
+    @include DisplayPosition($flex-direction: column);
+    input{
+        width: 15rem;
+        border: 0;
+        outline: 0;
+        border-bottom: 2px solid $light-text;
+        margin-bottom: 1rem;
+    }
+    input[type="text"]{
+            font-family: $openSans-font;
+    }
+}

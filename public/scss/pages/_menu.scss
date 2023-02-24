@@ -4,6 +4,16 @@
 @import '../components/buttons';
 
 section.menu__page{
+    div.quick_menu-nav{
+        margin: 3rem 0rem;
+        a{
+            padding: 1rem 1rem;
+            color: #000;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: $roboto-font;
+        }
+    }
     @include DisplayPosition($flex-direction: column, $justify-content: center, $align-items: center);
     div.menu__heading{
         margin: 3rem 0rem;
