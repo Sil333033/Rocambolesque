@@ -16,7 +16,7 @@
                 <br>
                 <input type="text" placeholder="Enter your groupsize">
                 <br>
-                <input type="text" placeholder="Enter a description">
+                <textarea name="" id="" placeholder="Enter a description"></textarea>
             </form>
         </div>
         <div class="button-div">

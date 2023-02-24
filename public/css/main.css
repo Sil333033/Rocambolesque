@@ -1790,6 +1790,14 @@ form input {
   border-bottom: 2px solid #979797;
   margin-bottom: 1rem;
 }
+form textarea {
+  font-family: "Open Sans", sans-serif;
+  height: 5rem;
+  width: 15rem;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid #979797;
+}
 form input[type=text] {
   font-family: "Open Sans", sans-serif;
 }
@@ -1856,6 +1864,14 @@ form input {
   border-bottom: 2px solid #979797;
   margin-bottom: 1rem;
 }
+form textarea {
+  font-family: "Open Sans", sans-serif;
+  height: 5rem;
+  width: 15rem;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid #979797;
+}
 form input[type=text] {
   font-family: "Open Sans", sans-serif;
 }
@@ -1908,6 +1924,14 @@ form input {
   outline: 0;
   border-bottom: 2px solid #979797;
   margin-bottom: 1rem;
+}
+form textarea {
+  font-family: "Open Sans", sans-serif;
+  height: 5rem;
+  width: 15rem;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid #979797;
 }
 form input[type=text] {
   font-family: "Open Sans", sans-serif;
