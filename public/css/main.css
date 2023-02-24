@@ -1892,3 +1892,56 @@ section.register__section div.button-div {
   align-self: none;
   flex-wrap: none;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: none;
+  align-content: none;
+  align-self: none;
+  flex-wrap: none;
+}
+form input {
+  width: 15rem;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid #979797;
+  margin-bottom: 1rem;
+}
+form input[type=text] {
+  font-family: "Open Sans", sans-serif;
+}
+
+section.register__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: center;
+  align-content: none;
+  align-self: none;
+  flex-wrap: none;
+}
+section.register__section div.form {
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: none;
+  align-content: none;
+  align-self: none;
+  flex-wrap: none;
+}
+section.register__section div.form h2 {
+  font-size: 32px;
+}
+section.register__section div.button-div {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: none;
+  align-self: none;
+  flex-wrap: none;
+}
