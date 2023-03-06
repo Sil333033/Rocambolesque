@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,23 +8,25 @@
     <link rel="stylesheet" href="../../public/css/main.css">
     <title>Document</title>
 </head>
+
 <body>
     <!-- Intro Section -->
     <section class="register__section">
         <div class="form">
             <h2>REGISTREREN</h2>
-            <form action="">
-                <input type="text" placeholder="Enter your firstname">
+            <form action="" method="POST">
+                <input type="text" name="firstname" placeholder="Enter your firstname" required>
                 <br>
-                <input type="text" placeholder="Enter your infix">
+                <input type="text" name="infix" placeholder="Enter your infix">
                 <br>
-                <input type="text" placeholder="Enter your lastname">
+                <input type="text" name="lastname" placeholder="Enter your lastname" required>
                 <br>
-                <input type="text" placeholder="Enter your phone number">
+                <input type="text" name="phone" placeholder="Enter your phone number" required>
                 <br>
-                <input type="text" placeholder="Enter your email address">
+                <input type="email" name="email" placeholder="Enter your email address" required>
                 <br>
-                <input type="text" placeholder="Enter your password">
+                <input type="password" name="password" placeholder="Enter your password" required>
+                <button type="submit">submit</button>
             </form>
         </div>
         <div class="button-div">
@@ -38,4 +41,5 @@
     <script src="js/script.js"></script>
 
 </body>
+
 </html>
