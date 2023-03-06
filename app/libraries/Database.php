@@ -12,7 +12,8 @@ class Database
 
     public function __construct()
     {
-        $this->ConnectionSqlServer();
+        // $this->ConnectionSqlServer();
+        $this->ConnectionMySql();
     }
 
     private function ConnectionMySql()
