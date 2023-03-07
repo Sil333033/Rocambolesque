@@ -14,7 +14,7 @@
     <section class="register__section">
         <div class="form">
             <h2>REGISTREREN</h2>
-            <form action="" method="POST">
+            <form id="registerForm" action="" method="POST">
                 <input type="text" name="firstname" placeholder="Enter your firstname" required>
                 <br>
                 <input type="text" name="infix" placeholder="Enter your infix">
@@ -26,13 +26,12 @@
                 <input type="email" name="email" placeholder="Enter your email address" required>
                 <br>
                 <input type="password" name="password" placeholder="Enter your password" required>
-                <button type="submit">submit</button>
+                <div class="button-div">
+                    <button class="custom-btn btn-2" type="submit">
+                        <a>REGISTREREN</a>
+                    </button>
+                </div>
             </form>
-        </div>
-        <div class="button-div">
-            <button class="custom-btn btn-2">
-                <a href="">REGISTREREN</a>
-            </button>
         </div>
     </section>
 
