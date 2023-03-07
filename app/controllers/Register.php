@@ -7,15 +7,17 @@ class Register extends Controller
     public function __construct()
     {
         $this->UserModel = $this->model("UserModel");
+    
+        session_start();
     }
 
     public function index()
-    {
+    {   
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $filteredPost = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-            $res = $this->UserModel->createUser(
+            $id = $this->UserModel->createUser(
                 $filteredPost['firstname'],
                 $filteredPost['infix'],
                 $filteredPost['lastname'],
@@ -24,13 +26,21 @@ class Register extends Controller
                 $filteredPost['password']
             );
 
-            // var_dump($res);
-            // exit;
+            if ($id) {
+                $_SESSION['user_id'] = $id->v_personId;
 
-            echo "<h1>user created</h1>";
+                echo "<h1>user created</h1>";
+            } else {
+                echo "<h1>user not created</h1>";
+            }
 
             header("refresh:2;url=" . URLROOT . "/login");
         } else {
+
+            if(isset($_SESSION['user_id'])) {
+                header("Location: " . URLROOT . "/home");
+            }
+
             $this->view("register");
         }
     }
@@ -38,7 +48,10 @@ class Register extends Controller
     public function test()
     {
         $users = $this->UserModel->getUsers();
-
         var_dump($users);
+    }
+
+    public function dest() {
+       session_destroy();
     }
 }
