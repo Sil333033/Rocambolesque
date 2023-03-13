@@ -12,18 +12,19 @@
     <section class="login__section">
         <div class="form">
             <h2>INLOGGEN</h2>
-            <form action="">
-                <input type="text" placeholder="Enter your email address">
+            <form action="<?= URLROOT?>/Login/login" method="POST" class="form">
+                <input type="text" name= "email" placeholder="Enter your email address" required>
                 <br>
-                <input type="text" placeholder="Enter your password">
-            </form>
-        </div>
-        <div class="button-div">
-            <button class="custom-btn btn-2">
-                <a href="">INLOGGEN</a>
+                <input type="text" name= "password" placeholder="Enter your password" required>
+                 <div class="submit__btn">
+            <button class="custom-btn btn-2" type="submit">
+                INLOGGEN
             </button>
             <p>Nog geen account?  <a href="<?php echo URLROOT ?>/register">Maak er hier een aan!</a></p>
         </div>
+            </form>
+        </div>
+       
     </section>
 
     <!-- Scripts -->

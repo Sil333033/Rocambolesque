@@ -42,4 +42,40 @@ class UserModel
 
         return $this->db->resultSet();
     }
+
+
+    public function findUserByEmail($email)
+    {
+        $this->db->query('SELECT p.firstName as firstname
+                                ,u.id as userid
+                                ,c.email as email
+                                ,u.password as password
+                          FROM person p
+                          inner join contact c on c.personId = p.id
+                          inner join user u on u.personId = p.id
+                          where c.email = :email ');
+        $this->db->bind(':email', $email);
+
+        $row = $this->db->single();
+
+        if($this->db->rowCount() > 0) {
+            return $row;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public function login($email, $password)
+    {
+        $row = $this->findUserByEmail($email);
+        if($row == false) return false;
+        $hashedPassword = $row->password;
+        if (password_verify($password, $hashedPassword))
+        {
+            return $row;
+        } else {
+            return false;
+        }
+    }
 }
