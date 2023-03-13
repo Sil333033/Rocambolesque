@@ -18,7 +18,7 @@ class UserModel
         $this->db->bind(':lastname', $lastname);
         $this->db->bind(':phone', $phone);
         $this->db->bind(':email', $email);
-        $this->db->bind(':password', $password);
+        $this->db->bind(':password', password_hash($password, PASSWORD_ARGON2I));
 
         return $this->db->single();
 
