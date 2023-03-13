@@ -7,12 +7,10 @@ class Register extends Controller
     public function __construct()
     {
         $this->UserModel = $this->model("UserModel");
-    
-        session_start();
     }
 
     public function index()
-    {   
+    {
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $filteredPost = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -37,7 +35,7 @@ class Register extends Controller
             header("refresh:2;url=" . URLROOT . "/login");
         } else {
 
-            if(isset($_SESSION['user_id'])) {
+            if (isset($_SESSION['user_id'])) {
                 header("Location: " . URLROOT . "/home");
             }
 
@@ -51,7 +49,8 @@ class Register extends Controller
         var_dump($users);
     }
 
-    public function dest() {
-       session_destroy();
+    public function dest()
+    {
+        session_destroy();
     }
 }
