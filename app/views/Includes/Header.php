@@ -1,5 +1,8 @@
+<?php session_start() ?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +10,9 @@
     <title>MVC Framework</title>
     <link rel="stylesheet" href="../../../public/scss/css/main.css">
 </head>
+
 <body>
-<div class="container">
+    <div class="container">
         <nav>
             <div class="row">
                 <div class="topbar">
